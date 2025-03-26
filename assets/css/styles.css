@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: #F7FFF7;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: #80EBE4;
+    display: flex;
+    justify-content: left;
+}
+
+nav img{
+    width: 120px;
+}
+
+.linea{
+    border-right: 5px solid #F7FFF7;
+    height: 40px;
+    margin-left: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.menu-dropdown{
+    list-style: none;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1.2em;
+}
+
+.menu-dropdown li{
+    position: relative;
+}
+
+.menu-dropdown li a{
+    text-decoration: none;
+    padding: 10px 30px;
+    display: block;
+    color: #F7FFF7;
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: all 200ms;
+}
+
+.menu-dropdown li a:hover{
+    color: #ebf0eb;
+}
+
+.dropdown{
+    list-style: none;
+    padding: 0;
+    margin: -0.4em;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    top: 100%;
+    left: 0;
+    transition: all 100ms;
+    visibility: hidden;
+    background-color: #FFE66D;
+    box-shadow: 0px 0px 30px #c0c09b;
+    border-radius: 8px;
+}
+
+.submenu:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown li{
+    padding: 10px;
+}
+
+.derecha{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.derecha h1{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2em;
+    color: #F7FFF7;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    border-bottom: 2px solid #F7FFF7;
+}
+
+header h1, header h2{
+    text-align: center;
+    color: #454343;
+    font-size: 40px;
+    font-family: Arial, sans-serif;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.cartas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 4em;
+}
+
+.bloque{
+    background-color: #FFE66D;
+    height: 450px;
+    width: 550px;
+    box-shadow: 0px 0px 30px #e6e690;
+    border-radius: 8px;
+}
+
+.bloque h1{
+    font-size: 35px;
+}
+
+.bloque h2{
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 0.5em;
+}
+
+.bloque p, header p{
+    text-align: center;
+    color: #454343;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+.bloque img{
+    display: block;
+    margin: auto;
+    width: 300px;
+    border: 2px solid #454343;
+}
+
+.bloque button{
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 25px;
+    background-color: #F7FFF7;
+    border: 0;
+    transition: all 200ms;
+}
+
+.bloque button:hover{
+    background-color: #d0d3d0;
+    cursor:help;
+}
+
+.separacion{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}  
+
+header h2{
+    font-size: 30px;
+}
+
+#centrado{
+    display: block;
+    margin: auto;
+    box-shadow: 0px 0px 30px #70706f;
+    border-radius: 8px;
+}
+
+.faderight{
+    animation-name: faderight;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes faderight{
+    from{
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (max-width: 1200px){
+    .cartas{
+        gap: 1em;
+    }
+}
+
+@media (max-width: 1000px){
+    .cartas{
+        display: block;
+    }
+
+    .bloque{
+        margin: auto;
+    }
+}
+
+@media (max-width: 750px){
+    .derecha h1{
+        font-size: 20px;
+    }
+
+    .menu-dropdown li a{
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+
+    .menu-dropdown{
+        margin-right: 1em;
+    }
+
+    .bloque{
+        height: 400px;
+        width: 400px;
+    }
+
+    .bloque h1{
+        font-size: 25px;
+    }
+    
+    .bloque h2{
+        font-size: 20px;
+        margin-bottom: 0;
+        margin-top: 0.5em;
+    }
+    
+    .bloque p, header p{
+        text-align: center;
+        color: #454343;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+    }
+    
+    .bloque img{
+        display: block;
+        margin: auto;
+        width: 300px;
+        border: 2px solid #454343;
+    }
+
+    #centrado{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+
